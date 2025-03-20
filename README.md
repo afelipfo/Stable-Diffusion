@@ -203,3 +203,14 @@ Licenses for borrowed code can be found in `Settings -> Licenses` screen, and al
 - Hypertile - tfernd - https://github.com/tfernd/HyperTile
 - Initial Gradio script - posted on 4chan by an Anonymous user. Thank you Anonymous user.
 - (You)
+
+
+## Execution updated: 
+Execute the following steps
+
+python3.10 -m venv ~/Proyectos/Stable-Diffusion/venv
+source ~/Proyectos/Stable-Diffusion/venv/bin/activate
+pip install git+https://github.com/openai/CLIP.git
+python -c "import clip; print(clip.available_models())"
+nano ~/Proyectos/Stable-Diffusion/modules/launch_utils.py  # Change clip_package as above
+bash webui.sh
